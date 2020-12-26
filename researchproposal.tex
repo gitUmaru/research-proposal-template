@@ -1,68 +1,64 @@
-\documentclass[english,10pt]{article}
+\documentclass{IEEEtran}
 
-\usepackage{babel}
-\usepackage[utf8]{inputenc}
-\usepackage{csquotes}
 \usepackage{enumitem}
-\usepackage[a4paper, total={6in, 9in}]{geometry}
-
-\usepackage[
-    bibencoding=utf8,
-    style=alphabetic
-]{biblatex}
+\usepackage[]{biblatex}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{indentfirst}
+\usepackage{csquotes}
+\graphicspath{ {./images/} }
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{textcomp}
+\usepackage{xcolor}
 
 \bibliography{bibliography}
 
 \usepackage{amsmath}
 
-\title{Using a DCGAN for generating dark skin lesion images}
-\author{Muhammad Umar Ali}
+\title{\LARGE Using a Deep Convolutional Generative Adversarial Network to Synthesize Type IV-V Skin Lesion Images
+    \\
+    \large Establishing the Research Project}
+
+\author{
+\IEEEauthorblockN{Muhammad Umar Ali} \\
+\IEEEauthorblockA{\textit{School of Biomedical Engineering} \\
+\textit{University of British Columbia} \\
+umaruali@student.ubc.ca}
+}
 
 \begin{document}
     \maketitle
     \begin{abstract}
-        This is an abstract.
+        In A systematic review of pictures in scientific articles describing skin manifestations associated with COVID-19 and other dermatological issues, 93\% (120 out of 130) were taken with patients with the three fairest skin tones (Types I-III) and no representation of darker skin tones (Type V and VI) \cite{lester}.
     \end{abstract}
 
-
     \section{Overview}
-    {In this section, the essence of the proposed work is described by answering four key questions: what is objective of this study, why does the objective need to be addressed, what is the proposed solution, and why the solution is sufficient.  }
+    { In this section, the essence of the proposed work is described by answering four key questions: what is objective of this study, why does the objective need to be addressed, what is the proposed solution, and why the solution is sufficient/expected results.}
 
-    \begin{description}
-        \item [What is the problem being addressed in your work?]
-        {insert answer here}
-
-        \item [Why is it a problem?]{
-        insert answer here}
-
-        \item [What is the solution that you are coming up with?]{
-        insert answer here}
-
-        \item [Why is this a solution]{
-            include answer here
-            }
-    \end{description}
-
-\section{Deconstruction of The Problem}
-{In this section the table of contents for the proposed work is described.}
-
-    \begin{enumerate}
-        \item \textbf{Section 1 Name} insert brief description
-                \begin{enumerate}
-                    \item \textbf{Subsection 1 Name} insert brief description
-                    \item \textbf{Subsection 2 Name} insert brief description
-                \end{enumerate}
-        \item \textbf{Section 2 Name} insert brief description
-    \end{enumerate}
+    \subsection{What is the problem being addressed?}
+    {In current news media there has been a lot of discussion about the dermatological symptoms associated with COVID-19 infection, even if the individual is otherwise asymptomatic. }
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=8cm]{figure1}
+        \caption{Atopic dermatitis in an infant with Type V-VI dark skin (\textbf{A}) compared to one with Type I-III fair skin (\textbf{B}) \cite{bolognia}}
+    \end{figure}
 
 
-    \section{Relevant Related Work}
-    {In this section, identified related work is described.}
+\section{Deconstruction of The Solution}
+{In this section, a brief plan of the proposed solution is drafted. A high level overview of the data pipeline is provided for a better sense of how the project will proceed.}
+         \subsection{DCGAN}
+             \begin{enumerate}
+                 \item The Generator
+                    \begin{enumerate}
+                        \item {The generator uses upsampling layers to produce an image from a seed (random noise). The model uses LeakyReLU activation for each layer, except the output layer which uses tanh.}
+                    \end{enumerate}
+             \end{enumerate}
 
-    \begin{description}
-    \item[\cite{gruba_how_2017}] insert brief description
-    \item[\cite{zobel_writing_2015}] insert brief description
-    \end{description}
+\section{Relevant Related Work}
+    {In this section, identified related work is described. A general understanding of the current work being developed can help determine areas of further exploration.}
+    \subsection{Skin Lesion Images of People of Colour}
+        {In order to fully understand how to synthesize images of skin lesions and skin disease for people of colour, one must also understand how these diseases are presented in Type I-III skin tones compared to Type IV-VI.}
 
   \newpage
   \printbibliography
