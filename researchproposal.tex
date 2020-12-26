@@ -12,11 +12,12 @@
 \usepackage{textcomp}
 \usepackage{xcolor}
 
+% Name of BibTex file (bibliography.bib)
 \bibliography{bibliography}
 
 \usepackage{amsmath}
 
-\title{\LARGE Using a Deep Convolutional Generative Adversarial Network to Synthesize Type IV-V Skin Lesion Images
+\title{\LARGE Using \LaTeX       to Write Very Professional Looking Documents for Professionals
     \\
     \large Establishing the Research Project}
 
@@ -24,42 +25,59 @@
 \IEEEauthorblockN{Muhammad Umar Ali} \\
 \IEEEauthorblockA{\textit{School of Biomedical Engineering} \\
 \textit{University of British Columbia} \\
-umaruali@student.ubc.ca}
+gitUmaru@github.ca}
 }
 
 \begin{document}
     \maketitle
     \begin{abstract}
-        In A systematic review of pictures in scientific articles describing skin manifestations associated with COVID-19 and other dermatological issues, 93\% (120 out of 130) were taken with patients with the three fairest skin tones (Types I-III) and no representation of darker skin tones (Type V and VI) \cite{lester}.
+        This template will provide the syntax and code for what I think a research proposal/ establishment of the research project should look like. This "abstract" will simple serve as a place for the summary of the entire project, the key ideas behind the research.
     \end{abstract}
 
     \section{Overview}
     { In this section, the essence of the proposed work is described by answering four key questions: what is objective of this study, why does the objective need to be addressed, what is the proposed solution, and why the solution is sufficient/expected results.}
 
     \subsection{What is the problem being addressed?}
-    {In current news media there has been a lot of discussion about the dermatological symptoms associated with COVID-19 infection, even if the individual is otherwise asymptomatic. }
+    {The goal of this question is to clearly state what your work is about.
+    What is the problem it is supposed to solve? Answering this question is particular important during the early phases of your work, in order to gain further insight and understanding about what your work is going to cover and address. Answer this question very briefly by stating the problem or research question that you want to address/solve in your work.}
+
     \begin{figure}[htbp]
         \centering
         \includegraphics[width=8cm]{figure1}
-        \caption{Atopic dermatitis in an infant with Type V-VI dark skin (\textbf{A}) compared to one with Type I-III fair skin (\textbf{B}) \cite{bolognia}}
+        \caption{Insert whatever fancy plot you want by replacing the "figure1" with the name of the image that you want to use. The one provided in the repository is a logo for some medical pet company.}
     \end{figure}
+
+    \subsection{Why is this a problem?}
+        {The goal of this question is to describe why your work is relevant. Why should the reader care? Why is this the problem (of question 1) worth investigating? Answering this question is particular important during the early phases of your work, in order to gain further insight and understanding of the problem domain you are addressing. Further, it is a good checkpoint to ensure that you are addressing issues that are not just theoretical but have real-world applications.}
+
+    \subsection{What is the solution being presented?}
+        {The goal of this question is to describe the results of your work ans/or solution to the problem of your work. It is hard/impossible to answer this question in the early phases of your work, as usually you do not have results, yet. However, you can already state first ideas that you may have in order to discuss them with your supervisor.}
+
+    \subsection{Why is this solution sufficient and what are the expected results?}
+        {
+        The goal of this question is to describe who you developed your results and what the quality of them are. As well as what you expecting to find.
+        }
 
 
 \section{Deconstruction of The Solution}
 {In this section, a brief plan of the proposed solution is drafted. A high level overview of the data pipeline is provided for a better sense of how the project will proceed.}
-         \subsection{DCGAN}
+         \subsection{Finding the Data}
              \begin{enumerate}
-                 \item The Generator
+                 \item What Data
                     \begin{enumerate}
-                        \item {The generator uses upsampling layers to produce an image from a seed (random noise). The model uses LeakyReLU activation for each layer, except the output layer which uses tanh.}
+                        \item {This section is to provide some information about the specific solution that you trying to construct and how you plan to go about constructing it.}
                     \end{enumerate}
              \end{enumerate}
 
 \section{Relevant Related Work}
     {In this section, identified related work is described. A general understanding of the current work being developed can help determine areas of further exploration.}
-    \subsection{Skin Lesion Images of People of Colour}
-        {In order to fully understand how to synthesize images of skin lesions and skin disease for people of colour, one must also understand how these diseases are presented in Type I-III skin tones compared to Type IV-VI.}
+    \subsection{Others who have made research proposal templates}
+        {The person who has made this repository, https://github.com/stefantruehl/research-proposal-template, has done an excellent job and a lot of information was copied from here.}
+
+% \section{Conclusion}
+%     {This is very much optional, but I think that a final paragraph describing what the overall goal of the project is can be nice. Repetition highlights important points of the paper.}
 
   \newpage
+  % Will only print bibliogprahy for articles you have cited with \cite{LAST_NAME}
   \printbibliography
 \end{document}
